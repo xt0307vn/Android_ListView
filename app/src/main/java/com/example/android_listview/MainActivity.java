@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 if(inputNameLaptop.getText().toString().trim().isEmpty() != true) {
                     String name = inputNameLaptop.getText().toString().trim();
                     arrayList.add(name);
+                    Toast.makeText(MainActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
                     arrayAdapter.notifyDataSetChanged();
                 } else {
                     showDialog("Bạn chưa nhập laptop để thêm");
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 if(inputNameLaptop.getText().toString().trim().isEmpty() != true) {
                     String name = inputNameLaptop.getText().toString().trim();
                     arrayList.set(index, name);
+                    Toast.makeText(MainActivity.this, "Sửa thành công", Toast.LENGTH_SHORT).show();
                     arrayAdapter.notifyDataSetChanged();
                 } else {
                     showDialog("Bạn chưa chọn laptop để sửa");
